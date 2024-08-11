@@ -1,0 +1,38 @@
+{% extends "core/base.html" %} 
+{% load static %} 
+{% block content %}
+<div class="container mt-5">
+  <div class="text-center">
+    <img
+      src="{% static 'core/images/profile.png' %}"
+      alt="pic"
+      class="img-fluid rounded"
+      style="width: 250px; height: 250px; object-fit: cover;"
+    />
+  </div>
+  <div class="mt-5 text-white text-center mx-auto" style="max-width: 800px">
+    <h1 class="font-weight-bold text-warning">About Me</h1>
+    <div class="px-3 py-2" style="line-height: 1.8rem">
+      <p class="text-justify">
+        I am <b class="text-warning">M Farhan Ur Rasool</b>, a dedicated Python
+        developer with a strong focus on backend web development using
+        <b class="text-warning">Django Framework</b>. Currently pursuing a Bachelor of
+        Science in Computer Science at
+        <b class="text-warning">Agricultural University Faisalabad</b>, I am
+        deeply engaged in both my studies and practical coding projects. My
+        academic journey reflects a commitment to mastering .
+      </p>
+      <p class="text-justify">
+        Balancing rigorous coursework with hands-on experience, I actively
+        explore innovative solutions to real-world challenges. I am passionate
+        about leveraging my skills to contribute to impactful projects and
+        advance the field of <b class="text-warning">Web Development</b>.
+      </p>
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <a href="#" class="btn btn-outline-warning mx-2">Hire Me</a>
+    <a href="#" class="btn btn-outline-info mx-2">Contact</a>
+  </div>
+</div>
+{% endblock content %}
