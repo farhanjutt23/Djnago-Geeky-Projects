@@ -1,0 +1,25 @@
+{% load static %}
+
+<div class="h-100 p-3" style="max-width: 250px;">
+
+  <div class="text-center">
+    <img
+      src="{% static 'core/images/fani.jpg' %}"
+      alt="Profile pic"
+      class="img-fluid rounded-circle mt-4"
+      width="100px"
+      height="100px"
+    />
+    <h1 class="text-white mt-3 st-font">Farhan</h1>
+  </div>
+  <hr class="border-light my-3" />
+  
+  {% comment %} This is my navbar {% endcomment %}
+  <div class="nav flex-column text-center">
+    <a href="{% url 'home' %}" class="nav-link text-warning">Home</a>
+    <a href="{% url 'services' %}" class="nav-link text-warning">Services</a>
+    <a href="{% url 'skill' %}" class="nav-link text-warning">Skill</a>
+    <a href="{% url 'contact' %}" class="nav-link text-warning">Contact</a>
+  </div>
+
+</div>
