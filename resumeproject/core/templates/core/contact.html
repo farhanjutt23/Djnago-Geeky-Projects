@@ -1,0 +1,78 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block content %}
+<div class="container mt-5">
+  <!-- Contact Form -->
+  <div class="text-center mb-5">
+    <h2 class="text-warning mb-4" style="font-size: 2.5rem;">Contact Me:</h2>
+    <form method="post" class="bg-dark p-4 rounded shadow-lg mx-auto" style="max-width: 600px;">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="name" class="text-white">Your Name</label>
+        <input type="text" class="form-control form-control-lg" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email" class="text-white">Email</label>
+        <input type="email" class="form-control form-control-lg" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="message" class="text-white">Message</label>
+        <textarea class="form-control form-control-lg" id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-warning btn-lg btn-block">Submit</button>
+    </form>
+  </div>
+
+  <!-- Contact Details -->
+  <div class="text-warning mb-5">
+    <h3 class="text-center text-warning mb-4" style="font-size: 2rem;">Get in Touch</h3>
+    <div class="row">
+      <!-- Location -->
+      <div class="col-md-4 text-center mb-4">
+        <div class="card bg-dark text-light border-0 shadow-sm hover:shadow-lg transition-shadow">
+          <div class="card-body">
+            <i class="fas fa-map-marker-alt fa-2x mb-2" style="color: #FFC107;"></i>
+            <p class="mt-2">Toba Tek Singh</p>
+          </div>
+        </div>
+      </div>
+      <!-- Phone -->
+      <div class="col-md-4 text-center mb-4">
+        <div class="card bg-dark text-light border-0 shadow-sm hover:shadow-lg transition-shadow">
+          <div class="card-body">
+            <i class="fas fa-phone fa-2x mb-2" style="color: #FFC107;"></i>
+            <p class="mt-2">03417179032</p>
+          </div>
+        </div>
+      </div>
+      <!-- Email -->
+      <div class="col-md-4 text-center mb-4">
+        <div class="card bg-dark text-light border-0 shadow-sm hover:shadow-lg transition-shadow">
+          <div class="card-body">
+            <i class="fas fa-envelope fa-2x mb-2" style="color: #FFC107;"></i>
+            <p class="mt-2">farhanrasoolxx@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="text-center mb-5">
+    <a href="#" class="btn btn-outline-warning btn-lg mx-2">Hire Me</a>
+    <a href="#" class="btn btn-outline-info btn-lg mx-2">Home</a>
+  </div>
+
+  <!-- Social Media Icons -->
+  <div class="text-center mt-5">
+    <h5 class="text-warning mb-4">Check out my activities on these Accounts</h5>
+    <a href="https://www.linkedin.com/in/farhan-ur-rasool-%F0%9F%8E%97%EF%B8%8F-527bb4263/" class="btn btn-link text-warning mx-2" target="_blank" style="font-size: 1.5rem; transition: color 0.3s;">
+      <i class="fab fa-linkedin"></i>
+    </a>
+
+    <a href="https://github.com/farhanjutt23" class="btn btn-link text-warning mx-2" target="_blank" style="font-size: 1.5rem; transition: color 0.3s;">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+</div>
+{% endblock content %}
